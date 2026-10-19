@@ -5,7 +5,7 @@ in the paper can be regenerated from the code and cached intermediates in this f
 with no database or network access. Each figure folder has its own README describing
 its modules; the manuscript's Methods section describes the analyses.
 First versions of every script were initially written by Leyla Caglar and Julien Corbo,
-then elaborated with the help of LLMs through different versions.
+then refined and checked with the help of LLMs.
 
 ## System requirements
 
