@@ -1,0 +1,1 @@
+Loco supp: n=20 | loco T3-T1 med=149% (signrank p=8.9e-05); cap T3-T1 med=1.4% (p=0.25); cap ALL-EQ med=-6.6%

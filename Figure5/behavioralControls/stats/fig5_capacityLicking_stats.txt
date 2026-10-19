@@ -1,0 +1,11 @@
+FIGURE 5 main - licking tertiles (capacity vs licking), trained only.
+Tertiles on LickAUCz_1_2 ([1,2]s lick AUC); capacity and lick traces from the cached intermediates.
+
+Panel C scatter (all days, n=60 sessions): Pearson r=-0.386, p=0.00232
+  signrank dCapacity vs 0: median=-0.002922 p=6.02e-05 (z=-4.012 n=60)
+  signrank dLickAll  vs 0: median=0.6674 p=1.63e-11 (z=6.736 n=60)
+
+Panel D symmetric % change [1,2]s (median):
+  Licking T3-T1:  median=78.7% (n=60)
+  Capacity T3-T1: median=-5.1% (n=60)  Hedges g_av=-0.151 (N=60)
+  Capacity Tr-Nv: median=21.8% (n=60)

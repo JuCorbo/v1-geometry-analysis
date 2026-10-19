@@ -1,0 +1,5 @@
+Detection vs decision lickers (Figure 6 supp)
+go_t50 = time Go P(lick) reaches 50% of peak-above-baseline (s from stim onset)
+distribution: n=60, median=0.862, IQR[0.674, 1.446], range[0.412, 2.042]
+examples: detection C05_121220 go_t50=0.737 | decision F17_42221_ go_t50=1.860
+split at antimode go_t50=1.241 s -> detection 67% (n=40) / decision 33% (n=20)

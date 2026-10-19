@@ -1,0 +1,18 @@
+FIGURE 3 - dimensionality (PCA eigenspectrum): D_PR (participation ratio), k80, tail slope
+Compute: SVMPCATimeCourse_updated.m (dimMetrics). Go+NoGo averaged per window, then reps averaged within session (one value per session; n=42 naive / 60 trained).
+Cluster-permutation group test (groupSeparationTest): 10000 perms, |Hedges g|>=0.2, alpha=0.05, tail=left (trained lower).
+Onset = first sustained significant timepoint (s). dbi: 1=Naive, 2=Trained.
+clusterP = fraction of 10,000 permutations with max cluster mass >= observed (Maris & Oostenveld 2007), floored at 1e-4.
+
+== D_PR ==
+  Pooled (n=42 naive / 60 trained sessions): onset=0.180 s, clusterP=0.0001, nSigSust=20/20, (Trained-Naive)@1s=-13.972
+  D2 only: onset=0.180 s, clusterP=0.0002, nSigSust=20/20
+
+== k80 ==
+  Pooled (n=42 naive / 60 trained sessions): onset=0.180 s, clusterP=0.0001, nSigSust=20/20, (Trained-Naive)@1s=-8.535
+  D2 only: onset=0.180 s, clusterP=0.0009, nSigSust=20/20
+
+== tailSlope ==
+  Pooled (n=42 naive / 60 trained sessions): onset=0.180 s, clusterP=0.0001, nSigSust=20/20, (Trained-Naive)@1s=-0.015
+  D2 only: onset=0.180 s, clusterP=0.0016, nSigSust=20/20
+

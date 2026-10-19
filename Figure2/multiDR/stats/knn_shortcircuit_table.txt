@@ -1,0 +1,14 @@
+multiDR kNN short-circuit quantification (uniformized; shared cache getWindowed global vs baseline)
+Generated 2026-07-29 17:28
+First session per DB-day (D1/D3/D5). cross% = fraction of k=12 neighbours in the other class (event windows 0.2-3s);
+b/w = between-class centroid distance / within-class radius at the 1.5 s snapshot. Higher b/w & lower cross% = better separated.
+
+
+session (day)                | GLOBAL-z         | BASELINE-z
+                             | cross%   b/w    | cross%   b/w
+056_20423_0 (D1)             |  24.4%   0.36  |  17.3%   0.43
+056_20623_0 (D3)             |  33.4%   0.25  |  29.1%   0.30
+056_20823_0 (D5)             |  39.4%   0.21  |  35.9%   0.24
+B10_110920 (D1)              |   7.2%   0.40  |   4.7%   0.78
+B10_111120 (D3)              |  14.7%   0.30  |  13.0%   0.44
+B10_111320 (D5)              |  21.7%   0.28  |  26.2%   0.41

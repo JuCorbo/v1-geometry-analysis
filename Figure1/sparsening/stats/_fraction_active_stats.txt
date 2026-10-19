@@ -1,0 +1,22 @@
+--- Active-neuron fraction: MAIN = All (Go+NoGo pooled trials) ---
+Comparison: BETWEEN-GROUP naive vs trained (UNPAIRED); Wilcoxon rank-sum per window; BH-FDR across 3 windows.
+Effect size: Hedges g_av (pooled within-condition SD); g>0 => naive>trained.
+Neuron activated if window P(APrE>=1) > baseline Clopper-Pearson 95% upper CI (alpha=0.05).
+
+window       naive med[IQR]        trained med[IQR]      ranksum p   BH q      Hedges g_av
+All_0_1      0.459[0.378-0.525]  0.247[0.201-0.307]  7.02e-12    1.05e-11  +1.91
+All_1_2      0.457[0.395-0.531]  0.245[0.196-0.314]  1.5e-12     4.49e-12  +1.99
+All_2_3      0.451[0.383-0.534]  0.257[0.222-0.337]  4.24e-11    4.24e-11  +1.74
+(Hedges g_av > 0 => naive > trained; bands: <0.2 negligible, 0.2-0.4 small, 0.4-0.6 medium, >0.6 large.)
+
+(mean +/- SD):
+  All_0_1     naive 0.448 +/- 0.121 | trained 0.256 +/- 0.081
+  All_1_2     naive 0.459 +/- 0.127 | trained 0.258 +/- 0.077
+  All_2_3     naive 0.454 +/- 0.132 | trained 0.275 +/- 0.073
+
+Stimulus-averaged responsive fraction (per-session mean over 0-1/1-2/2-3 s):
+  [BETWEEN-GROUP naive vs trained, UNPAIRED rank-sum; Hedges g_av; g>0 => naive>trained]
+  All   naive med 0.452[0.387-0.530] mean 0.453+/-0.126 SD (SEM 0.019) | trained med 0.249[0.203-0.320] mean 0.263+/-0.072 SD (SEM 0.009) | rank-sum p=3.42e-12 Hedges g_av=+1.93
+  Go    naive med 0.355[0.298-0.412] mean 0.363+/-0.107 SD (SEM 0.016) | trained med 0.183[0.147-0.239] mean 0.191+/-0.061 SD (SEM 0.008) | rank-sum p=1.83e-13 Hedges g_av=+2.06
+  NoGo  naive med 0.378[0.299-0.422] mean 0.370+/-0.108 SD (SEM 0.017) | trained med 0.202[0.162-0.256] mean 0.211+/-0.062 SD (SEM 0.008) | rank-sum p=1.57e-11 Hedges g_av=+1.88
+(n = 42 naive, 60 trained sessions.)

@@ -1,0 +1,11 @@
+Figure 6 supp - NoGo axis position vs licking, NATIVE space (no dimensionality reduction)
+Metric: per-session slope of z(P(lick)) vs near-to-far rank along the Go->NoGo centroid axis;
+snapshot nearest 1.5 s, sliding bins of 20 trials stepped by 5.
+
+n sessions            : 60
+median slope          : -2.013
+negative slopes       : 49/60
+binomial test         : p = 3.78e-07 (one-sided, excess of negative slopes) | two-sided p = 7.56e-07
+median vs null        : perm p <5e-04 (observed median vs 2000-permutation null of the median;
+                        null shuffles lick outcomes within each session; floor = 1/(Nperm+1) = 5.0e-04)
+null 95% band (median): [-0.579, 0.604]

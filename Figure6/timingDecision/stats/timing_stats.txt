@@ -1,0 +1,25 @@
+FIGURE 6 timing thread — reported statistics
+Convention: neural divergence onsets reported at the window CENTRE (tvec_centre), 0.12 preprocessing.
+Onsets = pooled naive-vs-trained cluster-permutation onset; CI = 95% over 1000 session bootstraps.
+
+NEURAL DIVERGENCE ONSETS (s from stimulus onset)
+  Dimensionality (D_PR)  onset=0.115  95% CI [0.115, 0.115]  bootMed=0.115  detected=100%  (nN=42 nT=60, tail=left)
+  Manifold radius        onset=0.115  95% CI [0.115, 0.309]  bootMed=0.115  detected=99%  (nN=42 nT=60, tail=left)
+  Manifold capacity      onset=0.696  95% CI [0.115, 1.278]  bootMed=0.696  detected=100%  (nN=42 nT=60, tail=right)
+  Centroid distance      onset=1.278  95% CI [0.115, 2.634]  bootMed=1.278  detected=100%  (nN=42 nT=60, tail=right)
+
+BEHAVIOURAL DECISION PROXIES (trained; s from stimulus onset)
+  Go/NoGo lick divergence        median=0.890  Kruskal-Wallis day effect p=0.000126
+      D1 median=0.525 (n=10)
+      D2 median=0.569 (n=10)
+      D3 median=0.833 (n=10)
+      D4 median=0.944 (n=10)
+      D5 median=1.245 (n=10)
+      D6 median=1.716 (n=10)
+  Last correct-rejection lick    median=1.216  Kruskal-Wallis day effect p=0.0659
+      D1 median=1.018 (n=10)
+      D2 median=1.082 (n=10)
+      D3 median=1.368 (n=10)
+      D4 median=1.210 (n=10)
+      D5 median=1.472 (n=10)
+      D6 median=1.366 (n=7)

@@ -1,0 +1,21 @@
+Peak centroid distance (max over t>=0, RMS-norm.), per session, by day.
+Kruskal-Wallis effect of day within group: Naive p=0.02163 ; Trained p=0.0004962
+
+group    day      deg      median   n     
+Naive    D1       90       1.282    7     
+Naive    D2       45       0.948    7     
+Naive    D3       30       0.821    7     
+Naive    D4       25       0.573    7     
+Naive    D5       20       0.547    7     
+Naive    D6       15       0.494    7     
+Trained  D1       90       1.088    10    
+Trained  D2       45       1.048    10    
+Trained  D3       30       0.926    10    
+Trained  D4       25       0.662    10    
+Trained  D5       20       0.657    10    
+Trained  D6       15       0.432    10    
+
+--- Pooled group comparison (all sessions across days), naive vs trained ---
+    (per-session mean over window; rank-sum two-sided; Hedges g>0 => trained>naive)
+  1-3s : Naive 0.407 +/- 0.028 (n=42) | Trained 0.520 +/- 0.027 (n=60) | rank-sum p=0.006334 | Hedges g=+0.56
+  0-3s : Naive 0.456 +/- 0.033 (n=42) | Trained 0.560 +/- 0.031 (n=60) | rank-sum p=0.03841 | Hedges g=+0.45

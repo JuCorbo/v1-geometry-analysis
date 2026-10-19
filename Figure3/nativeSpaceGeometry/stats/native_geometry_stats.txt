@@ -1,0 +1,26 @@
+FIGURE 3 - native-space geometry (centroid distance, radius)
+Cluster-based permutation test (groupSeparationTest): 10000 perms, |Hedges g|>=0.2, alpha=0.05.
+Naive vs Trained, per session. Onset = first sustained significant timepoint (s).
+Tail: centDist right (trained>naive), radius left (trained<naive).
+clusterP = fraction of 10000 permutations with max cluster mass >= observed (Maris & Oostenveld 2007), floored at 1e-4.
+
+== Centroid distance ==
+  Pooled (all days, n=42 naive / 60 trained sessions): onset=1.278 s, clusterP=0.0042, nSigSust=14/20
+  Per day:  day  onset(s)   clusterP   nSigSust
+            D1   NaN        0.0725     0         (90 deg)
+            D2   1.665      0.0204     12        (45 deg)
+            D3   1.665      0.0244     12        (30 deg)
+            D4   NaN        0.0517     0         (25 deg)
+            D5   2.634      0.0385     7         (20 deg)
+            D6   2.247      0.0224     9         (15 deg)
+
+== Radius (mix) ==
+  Pooled (all days, n=42 naive / 60 trained sessions): onset=0.115 s, clusterP=0.0001, nSigSust=16/20
+  Per day:  day  onset(s)   clusterP   nSigSust
+            D1   0.115      0.0101     17        (90 deg)
+            D2   NaN        0.0944     0         (45 deg)
+            D3   NaN        0.1347     0         (30 deg)
+            D4   NaN        0.0863     0         (25 deg)
+            D5   NaN        0.0694     0         (20 deg)
+            D6   NaN        0.0992     0         (15 deg)
+

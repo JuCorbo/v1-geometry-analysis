@@ -1,0 +1,25 @@
+Pinned Python env (the one that generated every cached embedding — reproduces bit-for-bit):
+  pacmap 0.8.0
+  numpy 2.2.6
+  scikit-learn 1.7.2
+  scipy 1.15.2
+  annoy 1.17.3
+  umato 1.0.0
+  (installed in a dedicated Python virtual environment)
+
+PaCMAP call: n_components=3, n_neighbors=10, MN_ratio=0.5, FP_ratio=2.0, init="pca",
+             random_state=seed (main = seed 0).
+
+MATLAB: R2023a. (Original data pull used the lab SQL database; the pulled per-session
+X caches are included, so the pull step is not needed for reproduction.)
+
+PIPELINE (pull -> make -> render):
+  s01_pull_data4timeDR_globalz_sub.m  shared cache -> per-trial baseline-subtracted, global-z,
+                                     backward 3-frame windows. Writes X per session (MAIN input).
+  s01b_pull_data4timeDR_baselinez.m   same, but baseline z-score (getWindowed 'baseline'),
+                                     no per-trial subtraction (SUPP S2 + multiDR input).
+  s02_make_pacmap_umato.py            reads the pulled X, runs PaCMAP(3D)+UMATO per session -> *_PaCMAP_UMATO.mat
+  s03_render_cohort_and_theta_D135.m  panels a (example), c (theta boxplot), d (cohort D1/D3/D5)
+  s03b_render_cohort_D246.m           supp S1 (cohort D2/D4/D6)
+  s04_render_overlay_ellipses.m       panel e (D1->D6 overlaid Go/NoGo 1-SD ellipses)
+  s05_theta_stats_export.m            theta per-session/per-day CSVs + stats txt

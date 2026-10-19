@@ -1,0 +1,66 @@
+FIGURE 1 - SPARSENING: statistics
+Generated 19-Oct-2026 14:07:04
+
+CONVENTIONS
+  Signal = baseline z-scored (sigma floor 0.12), window-integrated APrEs; 3-frame backward windows, plotted vs tvec (window last frame).
+  Timecourse (pop-mean): cluster-based permutation (Maris & Oostenveld). Between-group naive-vs-trained = UNPAIRED; within-group Go-vs-NoGo = PAIRED (sign-flip).
+  Windowed (fraction active, amplitudes): rank-sum (between-group), signed-rank (within-group), BH-FDR.
+  Effect size = Hedges g_av; bands: <0.2 negligible, 0.2-0.4 small, 0.4-0.6 medium, >0.6 large. Median [IQR]; means +/- SD.
+
+========== (A) POPULATION-MEAN AMPLITUDE ==========
+--- Population mean activity (grand average across sessions) ---
+Windowing: 3-frame backward, step 3, baseline z-score (sigma floor 0.12); plotted vs tvec (window last frame).
+n sessions: naive Go=42 NoGo=42 | trained Go=60 NoGo=60
+Sustained mean +/- SEM over 1-3 s:
+  naive Go   0.134 +/- 0.013 | naive NoGo   0.135 +/- 0.013
+  trained Go 0.048 +/- 0.011 | trained NoGo 0.081 +/- 0.009
+  Hedges g_av [BETWEEN-GROUP naive vs trained, UNPAIRED], sustained 1-3s: Go +1.05 | NoGo +0.74  (g>0 => naive>trained)
+
+Stimulus-averaged population amplitude (per-session mean over 0-3 s):
+  [BETWEEN-GROUP naive vs trained, UNPAIRED rank-sum; Hedges g_av; g>0 => naive>trained]
+  Go   naive med 0.133[0.083-0.190] mean 0.145+/-0.090 SD (SEM 0.014) | trained med 0.046[0.016-0.114] mean 0.063+/-0.078 SD (SEM 0.010) | rank-sum p=1.17e-05 Hedges g_av=+0.98
+  NoGo naive med 0.144[0.068-0.208] mean 0.144+/-0.088 SD (SEM 0.014) | trained med 0.073[0.033-0.138] mean 0.084+/-0.067 SD (SEM 0.009) | rank-sum p=0.000987 Hedges g_av=+0.78
+(n = 42 naive, 60 trained sessions.)
+
+Within-group Go vs NoGo AMPLITUDE (per-session mean; PAIRED signed-rank; Hedges g_av; g>0 => NoGo>Go):
+  naive   1-3s(late)  Go med 0.121[0.069-0.182] mean 0.134+/-0.084 | NoGo med 0.125[0.067-0.192] mean 0.135+/-0.083 | diff(NoGo-Go) med 0.002 mean 0.001+/-0.029 | signed-rank p=0.886 Hedges g_av=+0.02
+  naive   0-3s(full)  Go med 0.133[0.083-0.190] mean 0.145+/-0.090 | NoGo med 0.144[0.068-0.208] mean 0.144+/-0.088 | diff(NoGo-Go) med -0.004 mean -0.001+/-0.030 | signed-rank p=0.817 Hedges g_av=-0.01
+  trained 1-3s(late)  Go med 0.031[0.000-0.100] mean 0.048+/-0.079 | NoGo med 0.073[0.037-0.126] mean 0.081+/-0.067 | diff(NoGo-Go) med 0.024 mean 0.033+/-0.056 | signed-rank p=2.9e-05 Hedges g_av=+0.45
+  trained 0-3s(full)  Go med 0.046[0.016-0.114] mean 0.063+/-0.078 | NoGo med 0.073[0.033-0.138] mean 0.084+/-0.067 | diff(NoGo-Go) med 0.016 mean 0.021+/-0.058 | signed-rank p=0.00492 Hedges g_av=+0.29
+
+Timecourse: cluster-based permutation test (Maris & Oostenveld 2007), two-sided, 10000 perms,
+|Hedges g|>=0.2, minSustained 2. Naive-vs-trained = UNPAIRED (label shuffle); Go-vs-NoGo = PAIRED (sign-flip).
+Onset = CENTRE of the first sustained-significant window (s); timecourse plotted vs last-frame time. clusterP = fraction of perms with max cluster mass >= observed (floored 1e-4).
+  Naive vs Trained Go (unpaired)     onset t=0.31 s; clusterP=0.0001; sig 93% of 0-3s bins
+  Naive vs Trained NoGo (unpaired)   onset t=0.31 s; clusterP=0.0003; sig 93% of 0-3s bins
+  Go vs NoGo naive (paired)          onset t=NaN s; clusterP=0.1322; sig 0% of 0-3s bins
+  Go vs NoGo trained (paired)        onset t=0.89 s; clusterP=0.0001; sig 73% of 0-3s bins
+
+Example sessions (D3, 30 deg): naive 056_20623_0 (427 neurons), trained F07_42221 (261 neurons)
+
+
+========== (B) FRACTION OF RESPONSIVE NEURONS ==========
+--- Active-neuron fraction: MAIN = All (Go+NoGo pooled trials) ---
+Comparison: BETWEEN-GROUP naive vs trained (UNPAIRED); Wilcoxon rank-sum per window; BH-FDR across 3 windows.
+Effect size: Hedges g_av (pooled within-condition SD); g>0 => naive>trained.
+Neuron activated if window P(APrE>=1) > baseline Clopper-Pearson 95% upper CI (alpha=0.05).
+
+window       naive med[IQR]        trained med[IQR]      ranksum p   BH q      Hedges g_av
+All_0_1      0.459[0.378-0.525]  0.247[0.201-0.307]  7.02e-12    1.05e-11  +1.91
+All_1_2      0.457[0.395-0.531]  0.245[0.196-0.314]  1.5e-12     4.49e-12  +1.99
+All_2_3      0.451[0.383-0.534]  0.257[0.222-0.337]  4.24e-11    4.24e-11  +1.74
+(Hedges g_av > 0 => naive > trained; bands: <0.2 negligible, 0.2-0.4 small, 0.4-0.6 medium, >0.6 large.)
+
+(mean +/- SD):
+  All_0_1     naive 0.448 +/- 0.121 | trained 0.256 +/- 0.081
+  All_1_2     naive 0.459 +/- 0.127 | trained 0.258 +/- 0.077
+  All_2_3     naive 0.454 +/- 0.132 | trained 0.275 +/- 0.073
+
+Stimulus-averaged responsive fraction (per-session mean over 0-1/1-2/2-3 s):
+  [BETWEEN-GROUP naive vs trained, UNPAIRED rank-sum; Hedges g_av; g>0 => naive>trained]
+  All   naive med 0.452[0.387-0.530] mean 0.453+/-0.126 SD (SEM 0.019) | trained med 0.249[0.203-0.320] mean 0.263+/-0.072 SD (SEM 0.009) | rank-sum p=3.42e-12 Hedges g_av=+1.93
+  Go    naive med 0.355[0.298-0.412] mean 0.363+/-0.107 SD (SEM 0.016) | trained med 0.183[0.147-0.239] mean 0.191+/-0.061 SD (SEM 0.008) | rank-sum p=1.83e-13 Hedges g_av=+2.06
+  NoGo  naive med 0.378[0.299-0.422] mean 0.370+/-0.108 SD (SEM 0.017) | trained med 0.202[0.162-0.256] mean 0.211+/-0.062 SD (SEM 0.008) | rank-sum p=1.57e-11 Hedges g_av=+1.88
+(n = 42 naive, 60 trained sessions.)
+
+

@@ -1,0 +1,22 @@
+FIGURE 1 - BEHAVIOR: statistics
+Generated 19-Oct-2026 07:44:28
+Source (cache): behaviorSummary_data.mat; fig1_c_training_exampleF07.csv
+
+Trained cohort during imaging: n = 10 animals (F06, B10, F07, C02, C05, F05, F09, F10, F17, F19)
+
+Per-day performance (group mean +/- SEM across animals):
+day  sep(deg) hitRate          faRate           dprime           n   
+D1   90       0.938 +/- 0.015   0.111 +/- 0.026   2.996 +/- 0.124   10
+D2   45       0.909 +/- 0.027   0.141 +/- 0.027   2.726 +/- 0.295   10
+D3   30       0.911 +/- 0.035   0.330 +/- 0.040   2.054 +/- 0.240   10
+D4   25       0.967 +/- 0.013   0.423 +/- 0.074   2.163 +/- 0.248   10
+D5   20       0.934 +/- 0.014   0.562 +/- 0.060   1.408 +/- 0.203   10
+D6   15       0.924 +/- 0.020   0.771 +/- 0.035   0.787 +/- 0.155   10
+
+Chance ceiling (best random d'): 1.679
+  method: favourable 77.5%/22.5% percentile corner, n=128, pGo=0.930 (Corbo 2025).
+  day-means exceeding ceiling: 4 / 6
+
+Difficulty effect (Spearman d' vs separation): rho=0.756, p=2.81e-12, n=60
+
+Example training animal F07: 10 sessions, session d' 0.07 -> 4.31

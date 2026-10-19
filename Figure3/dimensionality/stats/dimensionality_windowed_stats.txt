@@ -1,0 +1,33 @@
+FIGURE 3 - dimensionality: windowed group statistics
+One value per session: Go+NoGo averaged per window, rounds averaged, mean over window; pooled across days.
+Between-group: Wilcoxon rank-sum, Hedges g (pooled SD, small-sample corrected), mean +/- SEM reported.
+Within-group baseline->stimulus: Wilcoxon signed-rank, Hedges g_av (RMS of the two SDs).
+Timecourse tests (onset, cluster p) live in dimensionality_stats.txt.
+
+== D_PR ==
+  1-3s            : Naive 42.5 +/- 0.71 (n=42) | Trained 28.03 +/- 0.97 (n=60) | rank-sum p=6.414e-15 | Hedges g=-2.22
+  0-3s            : Naive 40.45 +/- 0.74 (n=42) | Trained 26.55 +/- 0.93 (n=60) | rank-sum p=5.456e-15 | Hedges g=-2.19
+  baseline (t<0)  : Naive 46.61 +/- 1.3 (n=42) | Trained 47.51 +/- 1.1 (n=60) | rank-sum p=0.6512 | Hedges g=+0.11
+  Naive   baseline->1-3s  : 46.61 -> 42.5 (n=42) | signed-rank p=0.002143 | Hedges g_av=-0.59
+  Trained baseline->1-3s  : 47.51 -> 28.03 (n=60) | signed-rank p=1.63e-11 | Hedges g_av=-2.45
+
+== k80 ==
+  1-3s            : Naive 38.12 +/- 0.53 (n=42) | Trained 28.7 +/- 0.92 (n=60) | rank-sum p=1.844e-11 | Hedges g=-1.59
+  0-3s            : Naive 37.21 +/- 0.56 (n=42) | Trained 28.32 +/- 0.92 (n=60) | rank-sum p=1.571e-10 | Hedges g=-1.48
+  baseline (t<0)  : Naive 41.44 +/- 0.74 (n=42) | Trained 40.42 +/- 0.81 (n=60) | rank-sum p=0.6244 | Hedges g=-0.18
+  Naive   baseline->1-3s  : 41.44 -> 38.12 (n=42) | signed-rank p=6.138e-05 | Hedges g_av=-0.78
+  Trained baseline->1-3s  : 40.42 -> 28.7 (n=60) | signed-rank p=1.629e-11 | Hedges g_av=-1.72
+
+== tailSlope ==
+  1-3s            : Naive -0.03926 +/- 0.00065 (n=42) | Trained -0.05671 +/- 0.0037 (n=60) | rank-sum p=3.293e-11 | Hedges g=-0.78
+  0-3s            : Naive -0.04029 +/- 0.0007 (n=42) | Trained -0.05629 +/- 0.0037 (n=60) | rank-sum p=2.325e-09 | Hedges g=-0.72
+  baseline (t<0)  : Naive -0.03357 +/- 0.00078 (n=42) | Trained -0.038 +/- 0.0035 (n=60) | rank-sum p=0.783 | Hedges g=-0.21
+  Naive   baseline->1-3s  : -0.03357 -> -0.03926 (n=42) | signed-rank p=5.161e-07 | Hedges g_av=-1.20
+  Trained baseline->1-3s  : -0.038 -> -0.05671 (n=60) | signed-rank p=2.098e-11 | Hedges g_av=-0.66
+
+== Pooled-classes ("overall") D_PR ==  (pull_pooledSpectralPR.m: PCA on Go+NoGo pooled,
+   pooled-mean centred; the spectrum contains both within-class variability and between-class separation)
+  Timecourse (cluster permutation, 10000 perms, tail left): onset=0.180 s, clusterP=0.0001, nSigSust=20/20
+  base            : Naive 75.77 +/- 2.1 (n=42) | Trained 75.62 +/- 1.8 (n=60) | rank-sum p=0.9269 | Hedges g=-0.01
+  1-3s            : Naive 62.69 +/- 1.2 (n=42) | Trained 39.53 +/- 1.6 (n=60) | rank-sum p=1.431e-14 | Hedges g=-2.14
+  0-3s            : Naive 58.5 +/- 1.3 (n=42) | Trained 36.2 +/- 1.5 (n=60) | rank-sum p=7.142e-15 | Hedges g=-2.15

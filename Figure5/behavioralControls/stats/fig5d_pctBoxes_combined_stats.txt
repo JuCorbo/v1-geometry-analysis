@@ -1,0 +1,12 @@
+Lick         median=78.7% IQR[63.1, 103.3] n=60 signrank-p=1.63e-11
+Locomotion   median=148.6% IQR[140.8, 162.1] n=20 signrank-p=8.86e-05
+Pupil(pre)   median=27.5% IQR[22.4, 38.1] n=39 signrank-p=5.26e-08
+Cap|lick     median=-5.1% IQR[-10.6, 0.5] n=60 signrank-p=2.72e-05
+Cap|loco     median=1.4% IQR[-1.5, 5.5] n=20 signrank-p=0.247
+Cap|pupil    median=2.6% IQR[-4.2, 7.2] n=39 signrank-p=0.0939
+Cap Tr-Nv    median=21.8% IQR[11.3, 37.9] n=60 signrank-p=4.73e-10
+
+Hedges g_av (paired T3 vs T1, raw [1-2]s window means):
+  Lick  g=1.80 | Cap|lick  g=-0.15
+  Loco  g=0.89 | Cap|loco  g=0.02
+  Pupil g=0.61 | Cap|pupil g=0.03

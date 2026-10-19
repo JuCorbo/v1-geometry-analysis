@@ -1,0 +1,2 @@
+WIN=baseline [-1.5 0]s: pupil n=39 med=28% (p=5.3e-08) | cap n=39 med=2.6% (p=0.094) | ALL-EQ med=-12.3%
+WIN=post [1 2]s: pupil n=39 med=25% (p=5.3e-08) | cap n=39 med=3.4% (p=0.1) | ALL-EQ med=-13.2%

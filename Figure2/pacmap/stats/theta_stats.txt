@@ -1,0 +1,27 @@
+FIGURE 2 - PaCMAP Go/NoGo trajectory angle (theta)
+Generated 19-Oct-2026 14:28:03
+
+Input: main PaCMAP embeddings = global-z + per-trial baseline subtraction, backward windows, pacmap 0.8.0 (seed 0).
+Input pulled from the shared windowed cache via getWindowed('global').
+theta = angle (deg) between the Go and NoGo centroid-trajectory displacement vectors over t=0-0.8 s, per session.
+n = 102 sessions (Naive=42, Trained=60). All tests two-sided.
+
+Kruskal-Wallis:
+  Group (Naive vs Trained), pooled over days : p = 1.677e-05
+  Day/separation main effect                 : p = 1.991e-09
+  Day effect within Naive                    : p = 0.0002475
+  Day effect within Trained                  : p = 2.044e-07
+
+Per-day theta, median [IQR] deg (descriptive):
+  D1 Naive   79.4 [56.3-92.6] (n=7)
+  D1 Trained 80.0 [63.1-138.1] (n=10)
+  D2 Naive   87.2 [41.2-92.7] (n=7)
+  D2 Trained 110.0 [98.5-135.5] (n=10)
+  D3 Naive   28.9 [16.0-68.5] (n=7)
+  D3 Trained 89.5 [63.9-98.1] (n=10)
+  D4 Naive   21.2 [14.8-26.8] (n=7)
+  D4 Trained 60.2 [50.5-71.2] (n=10)
+  D5 Naive   13.8 [5.2-14.5] (n=7)
+  D5 Trained 44.4 [26.8-48.8] (n=10)
+  D6 Naive   8.2 [2.7-10.8] (n=7)
+  D6 Trained 30.9 [23.4-34.9] (n=10)

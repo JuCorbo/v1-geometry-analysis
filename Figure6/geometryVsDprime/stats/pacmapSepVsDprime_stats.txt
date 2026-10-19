@@ -1,0 +1,4 @@
+PaCMAP Go/NoGo separation vs d' (spread-normalised centroid distance). n=60 trained sessions.
+metric = ||cGo-cNo|| / mean(rGo,rNo), main global-z PaCMAP seed0, averaged over 1-2 s windows.
+1-2 s window:  FULL Spearman rho=0.604 p=6.02e-07 | DIFFICULTY-REGRESSED (partial | day) rho=0.298 p=0.0269
+the association survives day-partialling (unlike manifold capacity), i.e. it retains a within-difficulty link to d'.
